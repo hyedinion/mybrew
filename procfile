@@ -1,1 +1,1 @@
-web: gunicorn mybrew_project.wsgi --log-file -
+web: gunicorn mybrew_project.wsgi
