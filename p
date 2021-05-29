@@ -1,1 +1,0 @@
-web: gunicorn mybrew_project.wsgi
