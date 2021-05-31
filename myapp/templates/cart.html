@@ -149,12 +149,12 @@
                         {% csrf_token %}
                         
 
-                        <div class="col-4 p-5 bg-light">
+                        <div class="container" style="padding: 10%; background-color: white;">
                             <h3 class="text-center my-5">주문 정보</h3>
                             {% for d in data %}
                             <div>
                               <div class="my-3 row"><div class="h5 col-6">발효과정</div><div class="h6 col-6 text-right">{{d.balhyo}}</div></div>
-                              <div class="my-3 row"><div class="h5 col-6">향</div><div class="h6 col-6 text-right">{{{d.hyang}}</div></div>
+                              <div class="my-3 row"><div class="h5 col-6">향</div><div class="h6 col-6 text-right">{{d.hyang}}</div></div>
                               <div class="my-3 row"><div class="h5 col-6">수량</div><div class="h6 col-6 text-right">{{d.num}}</div></div>
                               <div class="my-3 row"><div class="h5 col-6">디자인</div><div class="h6 col-6 text-right">{{d.image}}</div></div>
                               <div class="my-3 row"><div class="h5 col-6">주문자 이름</div><div class="h6 col-6 text-right">{{d.name}}</div></div>
