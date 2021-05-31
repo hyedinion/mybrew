@@ -147,19 +147,22 @@
                 <div class="container" style="padding-left: 10%;padding-right: 10%;">
                     <form method='post' action="{% url 'kakao_pay'%}">
                         {% csrf_token %}
-                        {% for d in data %}
-                        <div class="mb-3">
-                          {{d.balhyo}}<br>
-                          {{d.hyang}}<br>
-                          {{d.num}}<br>
-                          {{d.image}}<br>
-                          {{d.name}}<br>
-                          {{d.time}}<br>
-                          {{d.phone}}<br>
-                          {{d.id}}<br>
-                        </div>
-                        <br>
-                        {% endfor %}
+                        
+
+                        <div class="col-4 p-5 bg-light">
+                            <h3 class="text-center my-5">주문 정보</h3>
+                            {% for d in data %}
+                            <div>
+                              <div class="my-3 row"><div class="h5 col-6">발효과정</div><div class="h6 col-6 text-right">{{d.balhyo}}</div></div>
+                              <div class="my-3 row"><div class="h5 col-6">향</div><div class="h6 col-6 text-right">{{{d.hyang}}</div></div>
+                              <div class="my-3 row"><div class="h5 col-6">수량</div><div class="h6 col-6 text-right">{{d.num}}</div></div>
+                              <div class="my-3 row"><div class="h5 col-6">디자인</div><div class="h6 col-6 text-right">{{d.image}}</div></div>
+                              <div class="my-3 row"><div class="h5 col-6">주문자 이름</div><div class="h6 col-6 text-right">{{d.name}}</div></div>
+                              <div class="my-3 row"><div class="h5 col-6">픽업 희망 시간</div><div class="h6 col-6 text-right">{{d.time}}</div></div>
+                              <div class="my-3 row"><div class="h5 col-6">주문자 연락처</div><div class="h6 col-6 text-right">{{d.phone}}</div></div>
+                              <div class="my-3 row"><div class="h5 col-6">주문 번호</div><div class="h6 col-6 text-right">{{d.id}}</div></div>
+                            </div><br>
+                            {% endfor %}
 
                         <br><br>
                         <div style='text-align: center;' class="mb-3">
