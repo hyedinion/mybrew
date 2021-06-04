@@ -25,4 +25,5 @@ urlpatterns = [
     path('cart/', myapp.views.cart, name='cart'),
     path('kakao_pay/', myapp.views.kakao_pay, name='kakao_pay'),
     path('approval/', myapp.views.approval, name='approval'),
+    path('confilm/', myapp.views.confilm, name='confilm'),
 ] + static(settings.MEDIA_URL, document_root= settings.MEDIA_ROOT)
