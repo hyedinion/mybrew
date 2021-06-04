@@ -78,7 +78,7 @@ def approval(request):
     data = request.session['check']
 
     order = Order()
-    order.id = data['id']
+    order.id = data['id'][:9]
     order.balhyo = data['balhyo']
     order.hyang = data['hyang']
     order.num = data['num']
