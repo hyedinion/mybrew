@@ -54,14 +54,14 @@ def kakao_pay(request):
             "total_amount": '2000',        # 구매 물품 가격
             "tax_free_amount": "0",         # 구매 물품 비과세
             
-            #"approval_url": "https://whispering-journey-37869.herokuapp.com/approval",
-            #"cancel_url": "https://whispering-journey-37869.herokuapp.com/cart",
-            #"fail_url": "https://whispering-journey-37869.herokuapp.com/cart",
+            "approval_url": "https://whispering-journey-37869.herokuapp.com/approval",
+            "cancel_url": "https://whispering-journey-37869.herokuapp.com/cart",
+            "fail_url": "https://whispering-journey-37869.herokuapp.com/cart",
 
             #테스트용
-            "approval_url": "http://127.0.0.1:8000/approval",
-            "cancel_url": "http://127.0.0.1:8000/cart",
-            "fail_url": "http://127.0.0.1:8000/cart",
+            #"approval_url": "http://127.0.0.1:8000/approval",
+            #"cancel_url": "http://127.0.0.1:8000/cart",
+            #"fail_url": "http://127.0.0.1:8000/cart",
         }
 
         res = requests.post(URL, headers=headers, params=params)
